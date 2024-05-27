@@ -26,7 +26,7 @@ and install the repo dependencies by running
 python setup.py install 
 ``` 
 
-The figures of the papers assume that trained models, and dataset are in the `data` folder, located in the project root. They can be downloaded using this [link](todo_fill_in_link).  
+The figures of the papers assume that trained models, and dataset are in the `data` folder, located in the project root. They can be downloaded using this [link](https://drive.google.com/drive/folders/1zwax2Q12B2WlhYp9xXvYrqzcnvgh0Oy8?usp=sharing).  
 
 ## Running the experiments 
 
