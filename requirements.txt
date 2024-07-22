@@ -168,3 +168,5 @@ widgetsnbextension==4.0.10
 XlsxWriter==3.2.0
 xyzservices==2024.4.0
 zipp==3.18.2
+imageio==2.34.2
+pycairo==1.26.1
