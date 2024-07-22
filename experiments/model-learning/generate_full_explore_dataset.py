@@ -29,7 +29,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     store_path = get_store_path("full-exploration-data")
 
-    dataset_path = store_path / "dataset.npz"
+    dataset_path = store_path / "full_exploration.npz"
 
     logger.info(f"Storing results at: {store_path}")
 
