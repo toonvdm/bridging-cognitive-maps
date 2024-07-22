@@ -39,10 +39,8 @@ if __name__ == "__main__":
     logger.info(f"Loaded data from {data_path}")
 
     # If training crashes, rerun from a checkpoint
-    store_path = Path(
-        "/home/toon/projects/hippocampus-models/data/working/train-HMM/2024-01-28/13-14-58"
-    )
-    start_from = 70
+    store_path = get_store_path("train-HMM")
+    start_from = None
 
     logger.info(f"Storing results at {store_path}")
     save_config(
