@@ -19,16 +19,8 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     store_path = get_store_path("navigation-clone-agent")
 
-    recent = False
-
-    if not recent:
-        cscg_path = get_data_path() / "output"
-    else:
-        cscg_path = Path(
-            load_config(get_recents_path() / "cscg_path.yml")["cscg_path"]
-        )
-
-    agent_path = cscg_path / "chmm.pkl"
+    cscg_path = get_data_path() / "models/navigation"
+    agent_path = cscg_path / "cscg_hippo.pkl"
     tokenizer_path = cscg_path / "tokenizer.pkl"
 
     config = {

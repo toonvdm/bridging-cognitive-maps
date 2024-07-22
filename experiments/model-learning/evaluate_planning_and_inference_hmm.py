@@ -1,4 +1,5 @@
 import logging
+import numpy as np
 
 from pathlib import Path
 
@@ -6,7 +7,7 @@ from hippo import get_store_path, save_config
 from hippo.agents.hmm_agent import HMMAgent
 from hippo.evaluation.replay import ReplayEvaluation
 from hippo.evaluation.planning import PlannerEvaluation
-from hippo import save_object, load_object
+from hippo import save_object, load_object, get_data_path
 
 from hippo.models.hmm import HMM
 
@@ -20,13 +21,9 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     store_path = get_store_path("navigation-hmm-agent-viterbi")
 
-    hmm_path = Path(
-        "/home/toon/projects/hippocampus-models/data/working/train-HMM/2024-01-28/13-14-58"
-    )
-    i = "viterbi_90"
-
-    agent_path = hmm_path / f"hmm_step_{i}.pkl"
-    tokenizer_path = hmm_path / "tokenizer.pkl"
+    hmm_path = get_data_path() / "models/navigation"
+    agent_path = hmm_path / "hmm_hippo.pkl"
+    tokenizer_path = hmm_path / "hmm_tokenizer.pkl"
 
     config = {
         "hmm_path": str(agent_path),
@@ -45,8 +42,9 @@ if __name__ == "__main__":
     fig, ax = plt.subplots(4, 5, figsize=(10, 8))
     for i, a in enumerate(ax.flatten()):
         if i < len(tokenizer.codebook):
-            a.imshow(tokenizer.get_observation(i) / 255.0)
-            a.set_title(i)
+            obs = np.array(tokenizer.get_observation(i).tolist()) / 255.0
+            a.imshow(obs)
+            a.set_title(f"{i}")
     [a.axis("off") for a in ax.flatten()]
     plt.savefig(store_path / "observations.png", bbox_inches="tight")
     plt.close()
