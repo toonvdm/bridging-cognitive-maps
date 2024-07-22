@@ -21,9 +21,9 @@ The experiments were ran using python 3.11.6. The easiest way to set up the requ
 ```
 pip install -r requirements.txt
 ```
-and install the repo dependencies by running
+and install the repo in editable mode by running:
 ```
-python setup.py install 
+python setup.py develop 
 ``` 
 
 The figures of the papers assume that trained models, and dataset are in the `data` folder, located in the project root. They can be downloaded using this [link](https://drive.google.com/drive/folders/1zwax2Q12B2WlhYp9xXvYrqzcnvgh0Oy8?usp=sharing).  
@@ -33,7 +33,8 @@ The figures of the papers assume that trained models, and dataset are in the `da
 The cognitive maps can be trained using the scripts in `experiments/model-learning`:  
 
 - **The sequence dataset** can be generated using the `generate_full_explore_dataset.py` script. 
-- **The navigation model** can be trained using the `train_navigation_*.py` script, where the * can be either a cscg or a hmm, depending on which model you need. This requires a sequence dataset of the environment. These models can be evaluated using the resepective `evaluate_planning_and_inference_*.py`. Which will measure the success rate, when the agent starts in each possible pose in the maze, and is tasked to go to each of the corridors.
+- **The navigation model** can be trained using the `train_navigation_*.py` script, where the * can be either a cscg or a hmm, depending on which model you need. This requires the dataset to be in the `data/` folder. 
+- The navigation models can be evaluated using the resepective `evaluate_planning_and_inference_*.py`. Which will measure the success rate, when the agent starts in each possible pose in the maze, and is tasked to go to each of the corridors. NOTE: these scripts point to a location of a model to evaluate. 
 - **The task model** can be trained using the `train_task_cscg_loc.py` script. 
 
 The paper experiments and figures are located in `experiments/figures`. Where dedicated notebooks exist for each of the experiments. 
