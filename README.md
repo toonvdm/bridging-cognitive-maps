@@ -17,7 +17,7 @@ If you find the code useful, please refer to our work using:
 
 ## Installation
 
-The experiments were ran using python 3.11.6. The easiest way to set up the requirements is by creating a virtualenvironment and running: 
+The experiments require *Python 3.11* (we ran using Python 3.11.6). The easiest way to set up the requirements is by creating a virtualenvironment and running: 
 ```
 pip install -r requirements.txt
 ```
