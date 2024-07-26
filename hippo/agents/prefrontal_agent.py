@@ -242,8 +242,8 @@ class PrefrontalCSCGModel:
             C=C,
             gamma=gamma,
             action_selection="stochastic",
-            policies=self.construct_policies(1),
         )
+        self.agent.policies = self.construct_policies(1)
         self.prev_action = 0
 
         self.pE = np.ones_like(self.agent.E)
