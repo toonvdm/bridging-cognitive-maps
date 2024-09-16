@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/806409571.svg)](https://zenodo.org/doi/10.5281/zenodo.13769225)
+
 # Bridging Cognitive Maps
 
 This repository contains the code for the experiments and figures used in [Bridging Cognitive Maps: a Hierarchical Active Inference Model of Spatial Alternation Tasks and the Hippocampal-Prefrontal Circuit](https://arxiv.org/abs/2308.11463) by Toon Van de Maele, Bart Dhoedt, Tim Verbelen, and Giovanni Pezzulo. 
