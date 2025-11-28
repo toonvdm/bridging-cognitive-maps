@@ -2,20 +2,7 @@
 
 # Bridging Cognitive Maps
 
-This repository contains the code for the experiments and figures used in [Bridging Cognitive Maps: a Hierarchical Active Inference Model of Spatial Alternation Tasks and the Hippocampal-Prefrontal Circuit](https://arxiv.org/abs/2308.11463) by Toon Van de Maele, Bart Dhoedt, Tim Verbelen, and Giovanni Pezzulo. 
-
-If you find the code useful, please refer to our work using:
-
-```
-@misc{vandemaele2023bridging,
-      title={Bridging Cognitive Maps: a Hierarchical Active Inference Model of Spatial Alternation Tasks and the Hippocampal-Prefrontal Circuit}, 
-      author={Toon Van de Maele and Bart Dhoedt and Tim Verbelen and Giovanni Pezzulo},
-      year={2023},
-      eprint={2308.11463},
-      archivePrefix={arXiv},
-      primaryClass={q-bio.NC}
-}
-```
+This repository contains the code for the experiments and figures used in [A Hierarchical Active Inference Model of Spatial Alternation Tasks and the Hippocampal-Prefrontal Circuit](https://www.nature.com/articles/s41467-024-54257-3) by Toon Van de Maele, Bart Dhoedt, Tim Verbelen, and Giovanni Pezzulo. 
 
 ## Installation
 
@@ -41,8 +28,26 @@ The cognitive maps can be trained using the scripts in `experiments/model-learni
 
 The paper experiments and figures are located in `experiments/figures`. Where dedicated notebooks exist for each of the experiments. 
 
-
 ## Acknowledgments
 The code for training the clone structured cognitive graphs comes from [CSCG](https://github.com/vicariousinc/naturecomm_cscg). The active inference implementation relies on [PyMDP](https://github.com/infer-actively/pymdp). 
 
 
+## Citation
+
+If you find the code useful, please refer to our work using:
+
+```
+@article{VandeMaele2024,
+  title = {A hierarchical active inference model of spatial alternation tasks and the hippocampal-prefrontal circuit},
+  volume = {15},
+  ISSN = {2041-1723},
+  url = {http://dx.doi.org/10.1038/s41467-024-54257-3},
+  DOI = {10.1038/s41467-024-54257-3},
+  number = {1},
+  journal = {Nature Communications},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Van de Maele,  Toon and Dhoedt,  Bart and Verbelen,  Tim and Pezzulo,  Giovanni},
+  year = {2024},
+  month = nov 
+}
+```
